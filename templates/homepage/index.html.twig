@@ -1,8 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} 
 
-{% block title %}Cafe 80{% endblock %}
+{% block title %}Cafe 80{% endblock %} 
 
 {% block body %}
-
+<header class="d-flex justify-content-between">
+    <h1>Cafe 80</h1>
+    {% if app.user %}
+      <p>Welcome, {{ app.user.username }}!</p>
+      <h1><a href="{{ path('app_logout') }}">Logout</a></h1>
+    {% else %}
+      <h1><a href="{{ path('app_login') }}">Sign In</a></h1>
+    {% endif %}
+</header>
 
 {% endblock %}
