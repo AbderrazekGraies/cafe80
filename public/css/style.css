@@ -1,8 +1,7 @@
 body {
   padding: 10px;
   height: 100vh;
-  background-image: url("/img/backgroundimg.jpg");
-  background-size: cover;
+  background-color: rgb(32, 3, 3);
   color: #fff;
 }
 
