@@ -5,9 +5,26 @@
 {% block body %}
 
 <main>
+    <div class="swiper-container"> 
+        <div class="swiper-wrapper">
+        {% for song in Songs %}
+            <div class="swiper-slide">
+            <img src="{{ asset('uploads/images/' ~ song.image) }}" alt="{{ song.name }}"style="height:200px;width:200px">
+                <div class="song-title">
+                
+                </div>
+            </div>  
+        {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
+            <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
 </main>
 {% endblock %}
 {% block scirpt %}
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 {% endblock %}
