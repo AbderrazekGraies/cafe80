@@ -5,9 +5,34 @@
 {% block body %}
 
 <main>
+    <div class="swiper-container"> 
+        <div class="swiper-wrapper">
+        {% for song in Songs %}
+                <div class="song-title">
+                
+                </div>
+            <div class="swiper-slide active" data-audio="{{ asset('uploads/songs/' ~ song.name )}}"  style="background-image: url('{{ asset('uploads/images/' ~ song.image ) }}');" data-image="{{ asset('uploads/images/' ~ song.image ) }}">
+                
+            </div>  
+        {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+            <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <audio src=""  id="player" controls></audio>
+    
+    <div class="container" id="disc">
+        <div class="album">
+            <div class="card">
+                <img id="imgCard" src="" alt="">
+            </div>
+            <div class="outer">
+                <div class="inner">
+                
+                </div>
+            </div>
+    </div>
 
 </main>
-{% endblock %}
-{% block scirpt %}
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 {% endblock %}
