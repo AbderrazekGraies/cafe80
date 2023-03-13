@@ -34,9 +34,9 @@ var swiper = new Swiper(".swiper-container", {
 const currentSlide =
   swiper.slides[swiper.activeIndex].getAttribute("data-audio");
 audio.src = currentSlide;
+console.log(audio.src);
 audio.load();
 cardImage.src = swiper.slides[swiper.activeIndex].getAttribute("data-image");
-title.innerHTML = audio.src;
 
 audio.addEventListener("play", () => {
   container.style.display = "block";
