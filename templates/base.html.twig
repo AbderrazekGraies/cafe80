@@ -22,7 +22,7 @@
     <body>
         {% block header %}
             <header class="d-flex justify-content-between">
-                <h1>Cafe 80</h1>
+                <h1><a href="{{ path('app_homepage') }}">Cafe 80<a></h1>
                 {% if app.user %}
                 <p>Welcome, {{ app.user.username }}!</p>
                 <h1><a href="{{ path('app_logout') }}">Logout</a></h1>
